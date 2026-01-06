@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shabbir Kash - Professional CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-green: #0f4c3a;
+      --accent-gold: #ffd700;
+      --text-dark: #1a1a1a;
+      --sidebar-bg: #144d3b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: var(--text-dark);
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* CV Layout with Narrow Margins */
+    .cv-container {
+      max-width: 100%;
+      width: 210mm; /* A4 Width */
+      min-height: 297mm; /* A4 Height */
+      margin: 0 auto;
+      background: white;
+      display: grid;
+      grid-template-columns: 280px 1fr; /* Adjusted sidebar ratio */
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    /* Sidebar - Reduced Padding */
+    .sidebar {
+      background: var(--sidebar-bg);
+      color: #fff;
+      padding: 40px 20px; /* Lowered left/right margin */
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-gold);
+      margin: 0 auto 20px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 28px;
+      color: var(--accent-gold);
+      text-align: center;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .tagline {
+      font-size: 14px;
+      text-align: center;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 15px;
+    }
+
+    .contact-info { margin-bottom: 30px; }
+    .contact-item {
+      font-size: 13px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fiverr-link {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .hire-btn {
+      display: block;
+      text-align: center;
+      background: var(--accent-gold);
+      color: var(--primary-green);
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .skills-title {
+      font-size: 16px;
+      margin: 30px 0 15px;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .skill-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin: 0 4px 8px 0;
+    }
+
+    /* Main Content - Tightened Margins */
+    .main-content { 
+      padding: 40px 30px; /* Reduced side margins to increase text width */
+    }
+
+    .section-header {
+      font-size: 22px;
+      color: var(--primary-green);
+      border-bottom: 3px solid var(--accent-gold);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .summary-box {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      border-left: 5px solid var(--primary-green);
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .exp-item {
+      margin-bottom: 30px;
+    }
+
+    .exp-title { font-weight: 700; color: #000; font-size: 18px; }
+    .exp-company { color: var(--primary-green); font-weight: 600; font-size: 15px; }
+    .exp-date { font-size: 13px; color: #666; }
+    
+    .exp-list {
+      list-style: none;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    .exp-list li {
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .exp-list li::before {
+      content: "•";
+      color: var(--accent-gold);
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+    }
+
+    .testimonial-badge {
+      background: #fff9e6;
+      border: 1px solid #ffe8a1;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    @media print {
+      @page { margin: 0; }
+      body { background: white; }
+      .cv-container {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cv-container { grid-template-columns: 1fr; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <aside class="sidebar">
+      <img src="./Gemini_Generated_Image_5d006s5d006s5d00.jpg" alt="Shabbir Kash" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
+      
+      <h1 class="name">Shabbir Kash</h1>
+      <p class="tagline">Desktop Publisher & Graphics Specialist</p>
+
+      <div class="contact-info">
+        <div class="contact-item">📞 +91 8000683235</div>
+        <div class="contact-item">📧 shabbirkash@gmail.com</div>
+        <div class="contact-item">📍 Jamnagar, India</div>
+        <div class="contact-item">⭐ <a href="https://www.fiverr.com/kashenterprise/design-flyer-with-attractive-colours" class="fiverr-link" target="_blank">Fiverr 5-Star Seller</a></div>
+        <a href="https://www.fiverr.com/kashenterprise/design-flyer-with-attractive-colours" class="hire-btn" target="_blank">Order on Fiverr</a>
+      </div>
+
+      <h3 class="skills-title">Design Mastery</h3>
+      <div class="skill-badge">Adobe Photoshop</div>
+      <div class="skill-badge">Adobe Illustrator</div>
+      <div class="skill-badge">Adobe InDesign</div>
+      <div class="skill-badge">CorelDRAW</div>
+      <div class="skill-badge">Vector Illustration</div>
+      <div class="skill-badge">Typesetting</div>
+
+      <h3 class="skills-title">Technical</h3>
+      <div class="skill-badge">Print Production</div>
+      <div class="skill-badge">Hardware & Networking</div>
+
+      <h3 class="skills-title">Languages</h3>
+      <div class="contact-item">Gujarati (Native)</div>
+      <div class="contact-item">Hindi (Fluent)</div>
+      <div class="contact-item">English (Professional)</div>
+    </aside>
+
+    <main class="main-content">
+      <div class="summary-box">
+        Versatile Graphics Designer with 17+ years of experience. Expert in high-impact print/digital assets and complex publication layouts. Delivering 5-star quality to international clients since 2013.
+      </div>
+
+      <h2 class="section-header">Professional Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-title">Founder & Lead Designer</div>
+        <div class="exp-company">Kash Enterprise | 2012 – Present</div>
+        <ul class="exp-list">
+          <li>Delivered 1000+ projects globally with a consistent 5.0 rating on Fiverr.</li>
+          <li>Expertise in flyer design, brand identity, and complex layout automation.</li>
+          <li>Managed end-to-end print production for diverse local and global vendors.</li>
+        </ul>
+        <div class="testimonial-badge">
+          "Expert in flyer design with attractive colors and professional layout." — Fiverr Feedback
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-title">Senior Graphics Designer</div>
+        <div class="exp-company">Madhuram Enterprise | 2011 – 2012</div>
+        <ul class="exp-list">
+          <li>Supervised junior design staff and optimized high-priority print workflows.</li>
+          <li>Mastery of Offset, Digital, and Flex print optimization.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-header">Education</h2>
+      <div class="exp-item">
+        <div class="exp-title">Diploma in Computer Hardware & Networking</div>
+        <div class="exp-company">Saurashtra Electronics Institute | Graduated 2009</div>
+      </div>
+
+      <h2 class="section-header">Core Competencies</h2>
+      <ul class="exp-list">
+        <li><strong>Print Ready Assets:</strong> Mastery of bleeds, margins, and CMYK workflows.</li>
+        <li><strong>DTP Excellence:</strong> High-speed typesetting and book formatting expertise.</li>
+        <li><strong>Client Relations:</strong> 13+ years of professional international freelancing.</li>
+      </ul>
+    </main>
+  </div>
+
+</body>
+</html>
