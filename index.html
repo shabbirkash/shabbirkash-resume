@@ -23,23 +23,21 @@
       -webkit-print-color-adjust: exact;
     }
 
-    /* CV Layout with Narrow Margins */
     .cv-container {
       max-width: 100%;
-      width: 210mm; /* A4 Width */
-      min-height: 297mm; /* A4 Height */
+      width: 210mm;
+      min-height: 297mm;
       margin: 0 auto;
       background: white;
       display: grid;
-      grid-template-columns: 280px 1fr; /* Adjusted sidebar ratio */
+      grid-template-columns: 280px 1fr;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
-    /* Sidebar - Reduced Padding */
     .sidebar {
       background: var(--sidebar-bg);
       color: #fff;
-      padding: 40px 20px; /* Lowered left/right margin */
+      padding: 40px 20px;
     }
 
     .profile-img {
@@ -50,6 +48,7 @@
       margin: 0 auto 20px;
       display: block;
       object-fit: cover;
+      background: linear-gradient(45deg, var(--accent-gold), #ffed4a);
     }
 
     .name {
@@ -117,9 +116,8 @@
       margin: 0 4px 8px 0;
     }
 
-    /* Main Content - Tightened Margins */
     .main-content { 
-      padding: 40px 30px; /* Reduced side margins to increase text width */
+      padding: 40px 30px;
     }
 
     .section-header {
@@ -149,7 +147,6 @@
 
     .exp-title { font-weight: 700; color: #000; font-size: 18px; }
     .exp-company { color: var(--primary-green); font-weight: 600; font-size: 15px; }
-    .exp-date { font-size: 13px; color: #666; }
     
     .exp-list {
       list-style: none;
@@ -198,12 +195,13 @@
 
   <div class="cv-container">
     <aside class="sidebar">
-      <img src="./Gemini_Generated_Image_5d006s5d006s5d00.jpg" alt="Shabbir Kash" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
+      <div class="profile-img"></div>
       
-      <h1 class="name">Shabbir Kash</h1>
+      <h1 class="name">SHABBIR KASH</h1>
       <p class="tagline">Desktop Publisher & Graphics Specialist</p>
 
       <div class="contact-info">
+        <div class="contact-item">🗓️ Date of Birth: 24-11-1989</div>
         <div class="contact-item">📞 +91 8000683235</div>
         <div class="contact-item">📧 shabbirkash@gmail.com</div>
         <div class="contact-item">📍 Jamnagar, India</div>
@@ -259,6 +257,9 @@
       </div>
 
       <h2 class="section-header">Education</h2>
+      <div class="exp-item">
+        <div class="exp-title">High School-S.S.C.</div>
+      </div>
       <div class="exp-item">
         <div class="exp-title">Diploma in Computer Hardware & Networking</div>
         <div class="exp-company">Saurashtra Electronics Institute | Graduated 2009</div>
